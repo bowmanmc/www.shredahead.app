@@ -1,0 +1,11 @@
+{
+  "name": "www.shredshed.app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "start": "jekyll serve --incremental --livereload",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Bowman <bowmanmc@gmail.com>"
+}
