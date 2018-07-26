@@ -42,10 +42,10 @@ jobs:
               command: pip install awscli --upgrade --user
         - run:
               name: Upload to s3
-              command: aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete --acl public-read
+              command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete --acl public-read
         - run:
               name: Invalidate Cloudfront Cache
-              command: aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/*"
+              command: ~/.local/bin/aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/*"
 workflows:
     version: 2
     test-deploy:
