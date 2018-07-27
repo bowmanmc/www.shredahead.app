@@ -4,7 +4,7 @@ main {
     background: $color-primary-20;
     background-attachment: fixed;
     background-blend-mode: multiply;
-    background-image: url('../images/juan-di-nella-966-unsplash.jpg');
+    background-image: url('../images/juan-di-nella-966-unsplash-mobile.jpg');
     background-position: bottom left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,6 +14,10 @@ main {
     height: 100vh;
     justify-content: center;
     padding: 0;
+
+    @include desktop {
+        background-image: url('../images/juan-di-nella-966-unsplash.jpg');
+    }
 
     .about, .header, .signup {
         max-width: 512px;
